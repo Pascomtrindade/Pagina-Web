@@ -12,10 +12,10 @@ export default function Navbar() {
     { href: '#horarios', label: 'Horários' },
     { href: '#ministerios', label: 'Pastorais' },
     { href: '#eventos', label: 'Agenda' },
-    { href: '#doacoes', label: 'Contribua', accent: true },
+    { href: '#contato', label: 'Contato' },
     { href: '#sacramentos', label: 'Sacramentos' },
     { href: '#local', label: 'Localização' },
-    { href: '#contato', label: 'Contato' },
+    { href: '#doacoes', label: 'Contribua', accent: true },
   ]
 
   const itemsMobile = [
