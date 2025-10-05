@@ -3,6 +3,20 @@ const logo = '/logo.png'
 import { parish } from '../data/config'
 import { Menu } from 'lucide-react'
 
+function scrollToId(href: string) {
+  const id = href.startsWith('#') ? href : `#${href}`
+  const el = document.querySelector(id)
+  if (!el) return
+  // respeita usuários com “reduzir movimento”
+  const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  el.scrollIntoView({
+    behavior: prefersReduced ? 'auto' : 'smooth',
+    // deixa a seção mais centralizada na viewport
+    block: 'center',
+    inline: 'nearest',
+  })
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -34,7 +48,8 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mt-3 mb-2 flex items-center justify-between rounded-2xl bg-white/85 backdrop-blur shadow-md px-4 py-3">
-          <a href="#inicio" className="flex items-center gap-3 group" aria-label="Ir para o início">
+          <a href="#inicio" className="flex items-center gap-3 group" aria-label="Ir para o início"
+             onClick={(e)=>{ e.preventDefault(); scrollToId('#inicio') }}>
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white shadow overflow-hidden">
               <img src={logo} alt="Logo da paróquia" className="h-10 w-10 object-contain" />
             </span>
@@ -53,15 +68,21 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={(e)=>{ e.preventDefault(); scrollToId(item.href) }}
                   className="inline-flex items-center rounded-xl bg-yellow-400/90 px-3 py-2 text-slate-900 hover:bg-yellow-400 shadow"
                 >
                   {item.label}
                 </a>
               ) : (
-                <a key={item.href} href={item.href} className="hover:text-blue-700">
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e)=>{ e.preventDefault(); scrollToId(item.href) }}
+                  className="hover:text-blue-700"
+                >
                   {item.label}
                 </a>
-              ),
+              )
             )}
           </nav>
 
@@ -82,11 +103,10 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="bg-white/85 backdrop-blur rounded-2xl shadow px-6 py-4 mb-2 text-sm font-medium grid grid-cols-1 gap-3">
               {itemsMobile.map((id) => (
-                <a
+                <button
                   key={id}
-                  href={`#${id}`}
-                  onClick={() => setOpen(false)}
-                  className="hover:text-blue-700 capitalize"
+                  onClick={() => { scrollToId(id); setOpen(false) }}
+                  className="text-left hover:text-blue-700 capitalize"
                 >
                   {id === 'sobre' && 'Quem Somos'}
                   {id === 'paroco' && 'Pároco'}
@@ -97,7 +117,7 @@ export default function Navbar() {
                   {id === 'sacramentos' && 'Sacramentos'}
                   {id === 'local' && 'Localização'}
                   {id === 'contato' && 'Contato'}
-                </a>
+                </button>
               ))}
             </div>
           </div>
