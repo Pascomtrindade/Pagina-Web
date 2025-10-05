@@ -91,9 +91,9 @@ export default function Navbar() {
                   {id === 'sobre' && 'Quem Somos'}
                   {id === 'paroco' && 'Pároco'}
                   {id === 'horarios' && 'Horários'}
-                  {id === 'ministerios' && 'Pastorais e Movimentos'}
-                  {id === 'eventos' && 'Notícias e Agenda'}
-                  {id === 'doacoes' && 'Dízimo / Contribua'}
+                  {id === 'ministerios' && 'Pastorais'}
+                  {id === 'eventos' && 'Agenda'}
+                  {id === 'doacoes' && 'Contribua'}
                   {id === 'sacramentos' && 'Sacramentos'}
                   {id === 'local' && 'Localização'}
                   {id === 'contato' && 'Contato'}
