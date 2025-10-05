@@ -26,7 +26,6 @@ export default function Schedule(){
             </ul>
           </div>
         </div>
-        <p className="mt-4 text-xs text-slate-500">* Substitua pelos horários oficiais da Paróquia Santíssima Trindade (Campina Grande).</p>
       </div>
     </section>
   )

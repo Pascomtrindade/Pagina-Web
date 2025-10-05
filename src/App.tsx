@@ -23,7 +23,7 @@ export default function App(){
       <Paroco />       {/* Pároco */}
       <Schedule />     {/* Horários */}
       <Ministries />   {/* Pastorais */}
-      <Events />       {/* Agenda */}
+                       {/* <Events />   Agenda */}
       <Location />     {/* Localização */}
       <Contact />      {/* Contato */}
       <Sacraments />   {/* Sacramentos */}
