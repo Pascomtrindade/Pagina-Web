@@ -129,6 +129,7 @@ export const ministries: Ministry[] = [
     info: 'Ensaios: a combinar por grupo.',
     history:
       'A Pastoral da Música evangeliza por meio do canto e da arte. Há grupos voltados para as missas dominicais, eventos e momentos de adoração, sempre em sintonia com a liturgia.',
+    image: '/img/pastorais/liturgia.jpg',
   },
   {
     title: 'Juventude',
@@ -136,6 +137,7 @@ export const ministries: Ministry[] = [
     info: 'Encontros: sábados, 17h.',
     history:
       'A Pastoral da Juventude promove retiros, encontros formativos e ações missionárias, incentivando o protagonismo juvenil e a vida comunitária.',
+    image: '/img/pastorais/liturgia.jpg',
   },
   {
     title: 'Caridade',
@@ -143,6 +145,7 @@ export const ministries: Ministry[] = [
     info: 'Doações na secretaria.',
     history:
       'Inspirada na Doutrina Social da Igreja, a pastoral organiza campanhas, visitas fraternas e parcerias para atendimento de necessidades básicas de famílias em situação de vulnerabilidade.',
+    image: '/img/pastorais/liturgia.jpg',
   },
   {
     title: 'Famílias',
@@ -150,6 +153,7 @@ export const ministries: Ministry[] = [
     info: 'Mensal — último domingo.',
     history:
       'A Pastoral Familiar promove encontros de espiritualidade, preparação para etapas da vida matrimonial e apoio a famílias em diferentes realidades.',
+    image: '/img/pastorais/liturgia.jpg',
   },
 ]
 
