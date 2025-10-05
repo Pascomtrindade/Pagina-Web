@@ -13,13 +13,13 @@ export default function Contact(){
             <h3 className="font-bold">WhatsApp</h3>
             <p className="mt-2 text-slate-600">Atendimento paroquial</p>
             <a href={`https://wa.me/${parish.whatsapp}`} className="mt-3 inline-flex rounded-2xl bg-green-600 px-4 py-2 font-semibold text-white hover:bg-green-700 shadow">Enviar mensagem</a>
-            <p className="mt-2 text-xs text-slate-500">Troque pelo número oficial.</p>
+            <p className="mt-2 text-xs text-slate-500"> </p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
             <h3 className="font-bold">E-mail</h3>
             <p className="mt-2 text-slate-600">Secretaria & pedidos</p>
             <a href={`mailto:${parish.email}`} className="mt-3 inline-flex rounded-2xl bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 shadow">Enviar e-mail</a>
-            <p className="mt-2 text-xs text-slate-500">Troque pelo e-mail oficial.</p>
+            <p className="mt-2 text-xs text-slate-500"></p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
             <h3 className="font-bold">Redes sociais</h3>
